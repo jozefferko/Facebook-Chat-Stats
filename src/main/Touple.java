@@ -1,6 +1,4 @@
-package sample;
-
-import javafx.beans.property.SimpleStringProperty;
+package main;
 
 public class Touple {
     private String name;

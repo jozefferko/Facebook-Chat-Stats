@@ -3,7 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/IdeaProjects</output-path>
     <root id="root">
       <element id="archive" name="IdeaProjects.jar">
-        <element id="module-output" name="IdeaProjects" />
+        <element id="module-output" name="Facebook-Stats" />
       </element>
     </root>
   </artifact>

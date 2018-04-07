@@ -2,7 +2,7 @@
   <artifact type="jar" name="IdeaProjects:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/IdeaProjects_jar</output-path>
     <root id="archive" name="IdeaProjects.jar">
-      <element id="module-output" name="IdeaProjects" />
+      <element id="module-output" name="Facebook-Stats" />
     </root>
   </artifact>
 </component>
