@@ -104,8 +104,8 @@ public class Controller implements Initializable {
 
 //            String path = "/Users/useuse/Downloads/facebook-jozoferko1";
 
-            if(path.length()>0&&path.charAt(path.length() - 1) == '/')
-                path= path.substring(0,path.length() - 1);
+            if (path.length() > 0 && path.charAt(path.length() - 1) == '/')
+                path = path.substring(0, path.length() - 1);
 
 
             //br = new BufferedReader(new FileReader(FILENAME));
@@ -130,7 +130,7 @@ public class Controller implements Initializable {
             //System.out.println(thisUser);
 
             int files = 0;
-            while (text.toString().contains("messages/" + (files + 1) +  ".html"))
+            while (text.toString().contains("messages/" + (files + 1) + ".html"))
                 files++;
 
             //System.out.println(files);
@@ -145,10 +145,8 @@ public class Controller implements Initializable {
                     Touple tp = analyzeConversation(conv);
                     updateSummary(tp);
                     tableView.getItems().add(tp);
-                    System.out.println("aaaaa: " + conv.name + " : " + tp.getCharacters());
+//                    System.out.println("aaaaa: " + conv.name + " : " + tp.getCharacters());
 
-                    if (i == 7)
-                        System.out.println("testing(jozgo:andza) " + jozgo + " : " + andza);
                 }
             }
 
@@ -168,9 +166,6 @@ public class Controller implements Initializable {
     }
 
     private Touple analyzeConversation(Conversation conv) {
-        jozgo = 0;
-        andza = 0;
-
         Touple tp = new Touple(conv.name);
 
         for (String message : conv.messages) {
@@ -213,20 +208,10 @@ public class Controller implements Initializable {
                     //System.out.println(message);
                     if (message.contains("<p><p>")) {
                         tp.incrementCharacters(message.substring(message.indexOf("<p><p>") + 6, message.indexOf("</p></p>")).length());
-                        jozgo += message.substring(message.indexOf("<p><p>") + 6, message.indexOf("</p></p>")).length();
                     } else {
                         tp.incrementCharacters(message.substring(message.indexOf("<p>") + 3, message.indexOf("</p>")).length());
-                        jozgo += message.substring(message.indexOf("<p>") + 3, message.indexOf("</p>")).length();
                     }
 
-                } else {
-                    if (message.contains("<p><p>")) {
-                        tp.incrementCharacters(message.substring(message.indexOf("<p><p>") + 6, message.indexOf("</p></p>")).length());
-                        andza += message.substring(message.indexOf("<p><p>") + 6, message.indexOf("</p></p>")).length();
-                    } else {
-                        tp.incrementCharacters(message.substring(message.indexOf("<p>") + 3, message.indexOf("</p>")).length());
-                        andza += message.substring(message.indexOf("<p>") + 3, message.indexOf("</p>")).length();
-                    }
                 }
             }
 

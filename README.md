@@ -12,6 +12,11 @@ Works as of 7th of April 2018
 * provide the path to the folder anc click Analyze
 * Give it a second :) 
 
+
+
+
 ## Example
 
 ![screenshot](https://github.com/flawlessBadger/Facebook-Stats/raw/master/example.png "Examplle")
+##
+**Sidenote: Each media item counts as a single character**
